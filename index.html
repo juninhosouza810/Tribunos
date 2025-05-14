@@ -6,6 +6,10 @@
   <title>Tribunus Assessoria</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -14,6 +18,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
@@ -45,24 +51,31 @@
 
     input, button {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      border: 1px solid #444;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
       font-size: 16px;
+      border: 1px solid #333;
       background-color: #222;
       color: white;
+      transition: 0.3s ease;
+    }
+
+    input:focus {
+      border-color: crimson;
+      outline: none;
     }
 
     button {
       background: crimson;
       border: none;
       cursor: pointer;
-      transition: background 0.3s;
+      box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
     }
 
     button:hover {
       background: #e60026;
+      box-shadow: 0 6px 14px rgba(220, 20, 60, 0.6);
     }
 
     .icons {
@@ -83,11 +96,13 @@
       align-items: center;
       font-size: 40px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     .icon-button:hover {
       background: crimson;
+      transform: scale(1.05);
     }
 
     .admin-panel {
@@ -110,7 +125,6 @@
 <body>
 
   <div class="container">
-    <!-- LOGO VIA LINK GITHUB (substitua pelo seu link real se desejar) -->
     <img class="logo" src="https://github.com/user-attachments/assets/f580fafd-dd25-479c-b039-01d06db0654e" alt="Logo Tribunus">
 
     <h1>Tribunos</h1>
@@ -129,6 +143,18 @@
       <div class="icon-button" onclick="window.open('https://www.tiktok.com/@cleversonoliveira1981/video/7500227767028419845')">
         <i class="fab fa-tiktok"></i>
       </div>
+      <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
+        <i class="fas fa-chart-line"></i>
+      </div>
+       </div>
+      <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
+        <i class="fas fa-chart-line"></i>
+      </div>
+     </div>
+      <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
+        <i class="fas fa-chart-line"></i>
+      </div>
+   </div>
       <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
         <i class="fas fa-chart-line"></i>
       </div>
