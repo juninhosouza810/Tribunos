@@ -36,6 +36,16 @@
       width: 100px;
       display: block;
       margin: 0 auto 20px auto;
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 4px rgba(255,255,255,0.5));
+      }
+      50% {
+        filter: drop-shadow(0 0 10px rgba(255,255,255,0.9));
+      }
     }
 
     h1, h2 {
@@ -146,18 +156,12 @@
       <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
         <i class="fas fa-chart-line"></i>
       </div>
-
-      <!-- Botão adicional 1 -->
-      <div class="icon-button" onclick="window.open('https://www.instagram.com/professor.cleverson81?igsh=M28xNml1cGNoazdt')">
+      <div class="icon-button" onclick="window.open('www.instagram.com/professor.cleverson81?igsh=M28xNml1cGNoazdt')">
         <i class="fab fa-instagram"></i>
       </div>
-
-      <!-- Botão adicional 2 -->
       <div class="icon-button" onclick="window.open('https://www.facebook.com')">
         <i class="fab fa-facebook-f"></i>
       </div>
-
-      <!-- Botão adicional 3 -->
       <div class="icon-button" onclick="window.open('https://wa.me/5599999999999')">
         <i class="fab fa-whatsapp"></i>
       </div>
