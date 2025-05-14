@@ -1,84 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tribunos</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #111;
-      color: white;
+      background-color: #111;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
     }
+
     .container {
-      max-width: 400px;
       width: 90%;
+      max-width: 420px;
       margin-top: 40px;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
     }
-    .github-logo {
-      font-size: 32px;
-      color: white;
-      text-align: center;
-      margin-bottom: 10px;
+
+    .logo-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
-    .github-logo a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
+
+    .logo-img img {
+      width: 100px;
+      height: auto;
+      filter: brightness(1.2);
     }
-    .github-logo a:hover {
-      color: crimson;
-    }
+
     h1, h2 {
       text-align: center;
-      margin-bottom: 10px;
+      margin: 5px 0;
     }
+
     h2 {
       font-size: 16px;
-      color: #ccc;
+      color: #aaa;
       margin-bottom: 30px;
     }
-    input, button {
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: #222;
+      color: white;
+      font-size: 15px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input:focus {
+      border-color: crimson;
+    }
+
+    button {
       width: 100%;
       padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
-    button {
       background: crimson;
       color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
       cursor: pointer;
+      transition: background 0.3s;
     }
+
+    button:hover {
+      background: #e60026;
+    }
+
     .icons {
       display: none;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 20px;
+      gap: 16px;
+      margin-top: 30px;
     }
+
     .icon-button {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       background: #222;
-      margin: 10px;
-      border-radius: 20px;
+      border-radius: 16px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 40px;
-      cursor: pointer;
-      transition: 0.3s;
+      font-size: 36px;
       color: white;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+      transition: background 0.3s, transform 0.2s;
     }
+
     .icon-button:hover {
       background: crimson;
+      transform: scale(1.05);
     }
+
     .admin-panel {
       display: none;
       margin-top: 20px;
@@ -86,21 +121,18 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- GitHub Logo -->
-    <div class="github-logo">
-      <a href="https://github.com/seu-usuario" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
+  <div class="logo-img">
+  <a href="https://github.com/seuusuario/seurepositorio" target="_blank">
+    <img src="https://raw.githubusercontent.com/seuusuario/seurepositorio/main/logo.png" alt="Logo Spartan">
+  </a>
+</div>
 
     <h1>Tribunos</h1>
     <h2>Assessoria Jurídica Militar</h2>
 
     <div id="loginForm">
-      <input type="text" id="username" placeholder="Usuário">
-      <input type="password" id="password" placeholder="Senha">
+      <input type="text" id="username" placeholder="Usuário" />
+      <input type="password" id="password" placeholder="Senha" />
       <button onclick="login()">Entrar</button>
     </div>
 
@@ -117,7 +149,7 @@
     </div>
 
     <div class="admin-panel" id="adminPanel">
-      <!-- Campos removidos -->
+      <!-- Área para conteúdo administrativo -->
     </div>
   </div>
 
@@ -138,6 +170,5 @@
       }
     }
   </script>
-
 </body>
 </html>
