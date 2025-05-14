@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tribunos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 400px;
+      width: 90%;
+      margin-top: 40px;
+    }
+    .github-logo {
+      font-size: 32px;
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .github-logo a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .github-logo a:hover {
+      color: crimson;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background: crimson;
+      color: white;
+      cursor: pointer;
+    }
+    .icons {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .icon-button {
+      width: 100px;
+      height: 100px;
+      background: #222;
+      margin: 10px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+    }
+    .icon-button:hover {
+      background: crimson;
+    }
+    .admin-panel {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- GitHub Logo -->
+    <div class="github-logo">
+      <a href="https://github.com/seu-usuario" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <h1>Tribunos</h1>
+    <h2>Assessoria Jurídica Militar</h2>
+
+    <div id="loginForm">
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+    </div>
+
+    <div class="icons" id="iconArea">
+      <div class="icon-button" onclick="window.open('https://www.youtube.com/watch?v=6SVIafBQhRo')">
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div class="icon-button" onclick="window.open('https://www.tiktok.com/@cleversonoliveira1981/video/7500227767028419845')">
+        <i class="fab fa-tiktok"></i>
+      </div>
+      <div class="icon-button" onclick="window.open('https://www.youtube.com/results?search_query=marketing')">
+        <i class="fas fa-chart-line"></i>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+      <!-- Campos removidos -->
+    </div>
+  </div>
+
+  <script>
+    let adminUser = "admin";
+    let adminPass = "1234";
+
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === adminUser && pass === adminPass) {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("iconArea").style.display = "flex";
+        document.getElementById("adminPanel").style.display = "block";
+      } else {
+        alert("Usuário ou senha incorretos.");
+      }
+    }
+  </script>
+
+</body>
+</html>
